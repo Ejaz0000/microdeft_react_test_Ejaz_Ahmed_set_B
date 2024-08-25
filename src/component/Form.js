@@ -9,6 +9,20 @@ const Form = () => {
 
     function handleSubmit(e){
         e.priventDefault()
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: title, })
+        };
+
+        async function postdata(){
+            const response = await fetch('', requestOptions);
+            const data = await response.json();
+        } 
+
+
+        postdata()
     }
   return (
     <div>
