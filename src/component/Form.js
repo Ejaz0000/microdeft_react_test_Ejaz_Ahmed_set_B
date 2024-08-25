@@ -13,11 +13,11 @@ const Form = () => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: title, })
+            body: JSON.stringify({ title: title, price: price, stock:stock, email:email, discount: discount})
         };
 
         async function postdata(){
-            const response = await fetch('', requestOptions);
+            const response = await fetch('https://react-interview.1putym.easypanel.host/api/product', requestOptions);
             const data = await response.json();
         } 
 
